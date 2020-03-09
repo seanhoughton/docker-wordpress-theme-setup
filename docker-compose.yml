@@ -30,7 +30,7 @@ services:
 
   yarn:
     build:
-      context: .
+      context: ./wp-content/themes/sage
       dockerfile: Dockerfile-yarn
     command:
       - yarn run build
