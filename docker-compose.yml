@@ -27,5 +27,16 @@ services:
     volumes:
       - ./wp-content:/var/www/html/wp-content
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  yarn:
+    build:
+      context: ./wp-content/themes/sage
+      dockerfile: Dockerfile-yarn
+    command:
+      - yarn run build
+    working_dir: /var/www/html/wp-content/themes/sage
+    volumes:
+      - ./wp-content/themes/sage:/var/www/html/wp-content/themes/sage      - 
+
 volumes:
   db_data:
