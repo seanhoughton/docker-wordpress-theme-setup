@@ -33,7 +33,7 @@ services:
       context: .
       dockerfile: Dockerfile-yarn
     command:
-      yarn run build
+      - yarn run build
     working_dir: /var/www/html/wp-content/themes/sage
     volumes:
       - ./wp-content/themes/sage:/var/www/html/wp-content/themes/sage      - 
